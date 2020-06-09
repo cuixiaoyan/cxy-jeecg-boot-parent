@@ -6,6 +6,8 @@ import java.math.BigDecimal;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -20,6 +22,7 @@ import org.jeecg.common.aspect.annotation.Dict;
  */
 @Data
 @TableName("publishingActivities")
+@ApiModel(value="发布活动对象", description="测试发布活动")
 public class PublishingActivities implements Serializable {
     private static final long serialVersionUID = 1L;
     
@@ -47,6 +50,7 @@ public class PublishingActivities implements Serializable {
 	private String sysOrgCode;
 	/**活动名称*/
 	@Excel(name = "活动名称", width = 15)
+	@ApiModelProperty(value = "活动名称")
 	private String activities;
 	/**开始时间*/
 	@Excel(name = "开始时间", width = 15, format = "yyyy-MM-dd HH:mm")

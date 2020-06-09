@@ -45,7 +45,7 @@ import com.alibaba.fastjson.JSON;
 @RestController
 @RequestMapping("/activities/publishingActivities")
 @Slf4j
-@Api(tags="发布任务")
+@Api(tags="发布任务API")
 public class PublishingActivitiesController {
 	@Autowired
 	private IPublishingActivitiesService publishingActivitiesService;
